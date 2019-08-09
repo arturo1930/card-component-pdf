@@ -1,11 +1,11 @@
 import MainComponent from "./MainComponent.vue";
-import TableComponent from "./components/table/Table.vue";
+import TableDemo from "./components/table/Table.vue";
 
 export default {
   install(Vue: any, options: any) {
     Vue.component('main-remote-component', MainComponent);
-    Vue.component('main-remote-table', TableComponent);
+    Vue.component('main-remote-table', TableDemo);
   }
 }
 
-export { MainComponent, TableComponent};
+export { MainComponent, TableDemo};
