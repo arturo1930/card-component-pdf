@@ -2,21 +2,21 @@ import { __extends, __decorate } from 'tslib';
 import Component from 'vue-class-component';
 import { Vue } from 'vue-property-decorator';
 
-var HelloWorldComponent =
+var MainComponent =
 /** @class */
 function (_super) {
-  __extends(HelloWorldComponent, _super);
+  __extends(MainComponent, _super);
 
-  function HelloWorldComponent() {
+  function MainComponent() {
     return _super !== null && _super.apply(this, arguments) || this;
   }
 
-  HelloWorldComponent = __decorate([Component], HelloWorldComponent);
-  return HelloWorldComponent;
+  MainComponent = __decorate([Component], MainComponent);
+  return MainComponent;
 }(Vue);
 
 /* script */
-var __vue_script__ = HelloWorldComponent;
+var __vue_script__ = MainComponent;
 /* template */
 
 var __vue_render__ = function __vue_render__() {
@@ -62,7 +62,7 @@ function __vue_normalize__(template, style, script, scope, functional, moduleIde
 /* style inject SSR */
 
 
-var MainComponent = __vue_normalize__({
+var MainComponent$1 = __vue_normalize__({
   render: __vue_render__,
   staticRenderFns: __vue_staticRenderFns__
 }, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__);
@@ -135,18 +135,18 @@ function __vue_normalize__$1(template, style, script, scope, functional, moduleI
 /* style inject SSR */
 
 
-var TableComponent = __vue_normalize__$1({
+var TableDemo = __vue_normalize__$1({
   render: __vue_render__$1,
   staticRenderFns: __vue_staticRenderFns__$1
 }, __vue_inject_styles__$1, __vue_script__$1, __vue_scope_id__$1, __vue_is_functional_template__$1);
 
 var index = {
   install: function install(Vue, options) {
-    Vue.component('main-remote-component', MainComponent);
-    Vue.component('main-remote-table', TableComponent);
+    Vue.component('main-remote-component', MainComponent$1);
+    Vue.component('main-remote-table', TableDemo);
   }
 };
 
 export default index;
-export { MainComponent, TableComponent };
+export { MainComponent$1 as MainComponent, TableDemo };
 //# sourceMappingURL=index.module.js.map

@@ -8,21 +8,21 @@ var tslib_1 = require('tslib');
 var Component = _interopDefault(require('vue-class-component'));
 var vuePropertyDecorator = require('vue-property-decorator');
 
-var HelloWorldComponent =
+var MainComponent =
 /** @class */
 function (_super) {
-  tslib_1.__extends(HelloWorldComponent, _super);
+  tslib_1.__extends(MainComponent, _super);
 
-  function HelloWorldComponent() {
+  function MainComponent() {
     return _super !== null && _super.apply(this, arguments) || this;
   }
 
-  HelloWorldComponent = tslib_1.__decorate([Component], HelloWorldComponent);
-  return HelloWorldComponent;
+  MainComponent = tslib_1.__decorate([Component], MainComponent);
+  return MainComponent;
 }(vuePropertyDecorator.Vue);
 
 /* script */
-var __vue_script__ = HelloWorldComponent;
+var __vue_script__ = MainComponent;
 /* template */
 
 var __vue_render__ = function __vue_render__() {
@@ -68,7 +68,7 @@ function __vue_normalize__(template, style, script, scope, functional, moduleIde
 /* style inject SSR */
 
 
-var MainComponent = __vue_normalize__({
+var MainComponent$1 = __vue_normalize__({
   render: __vue_render__,
   staticRenderFns: __vue_staticRenderFns__
 }, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__);
@@ -141,19 +141,19 @@ function __vue_normalize__$1(template, style, script, scope, functional, moduleI
 /* style inject SSR */
 
 
-var TableComponent = __vue_normalize__$1({
+var TableDemo = __vue_normalize__$1({
   render: __vue_render__$1,
   staticRenderFns: __vue_staticRenderFns__$1
 }, __vue_inject_styles__$1, __vue_script__$1, __vue_scope_id__$1, __vue_is_functional_template__$1);
 
 var index = {
   install: function install(Vue, options) {
-    Vue.component('main-remote-component', MainComponent);
-    Vue.component('main-remote-table', TableComponent);
+    Vue.component('main-remote-component', MainComponent$1);
+    Vue.component('main-remote-table', TableDemo);
   }
 };
 
-exports.MainComponent = MainComponent;
-exports.TableComponent = TableComponent;
+exports.MainComponent = MainComponent$1;
+exports.TableDemo = TableDemo;
 exports.default = index;
 //# sourceMappingURL=index.js.map
