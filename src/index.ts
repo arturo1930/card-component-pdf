@@ -8,4 +8,6 @@ export default {
   }
 }
 
-module.exports = {MainComponent, TableDemo};
+export { MainComponent };
+
+export {TableDemo};

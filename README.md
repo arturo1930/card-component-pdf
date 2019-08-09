@@ -24,6 +24,7 @@ export default {
 
 //export components
 export { MainComponent };
+export { TableDemo };
 ```
 ## Usage
 ```
@@ -35,7 +36,14 @@ components: { "main-remote-component": MainComponent },
     <main-remote-component></main-remote-component>
 </div>
 ```
+Or
 
+Using the exported default name
+```
+import Demo from "@conacyt/card-component-pdf";
+
+Vue.use(Demo);
+```
 ## Development
 For development with Hot Replace Module use `npm run serve` for serving the `example` folder.
 
