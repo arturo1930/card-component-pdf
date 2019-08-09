@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
 var tslib_1 = require('tslib');
@@ -152,8 +150,10 @@ var index = {
     Vue.component('main-remote-table', TableDemo);
   }
 };
+module.exports = {
+  MainComponent: MainComponent$1,
+  TableDemo: TableDemo
+};
 
-exports.MainComponent = MainComponent$1;
-exports.TableDemo = TableDemo;
-exports.default = index;
+module.exports = index;
 //# sourceMappingURL=index.js.map

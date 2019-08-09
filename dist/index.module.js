@@ -146,7 +146,10 @@ var index = {
     Vue.component('main-remote-table', TableDemo);
   }
 };
+module.exports = {
+  MainComponent: MainComponent$1,
+  TableDemo: TableDemo
+};
 
 export default index;
-export { MainComponent$1 as MainComponent, TableDemo };
 //# sourceMappingURL=index.module.js.map
