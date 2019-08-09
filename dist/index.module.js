@@ -26,7 +26,7 @@ var __vue_render__ = function __vue_render__() {
 
   var _c = _vm._self._c || _h;
 
-  return _c('h1', [_vm._v("Hello World Component")]);
+  return _c('h1', [_vm._v("Main Component")]);
 };
 
 var __vue_staticRenderFns__ = [];
@@ -44,7 +44,7 @@ var __vue_is_functional_template__ = false;
 function __vue_normalize__(template, style, script, scope, functional, moduleIdentifier, createInjector, createInjectorSSR) {
   var component = (typeof script === 'function' ? script.options : script) || {}; // For security concerns, we use only base name in production mode.
 
-  component.__file = "HelloWorldComponent.vue";
+  component.__file = "MainComponent.vue";
 
   if (!component.render) {
     component.render = template.render;
@@ -62,17 +62,17 @@ function __vue_normalize__(template, style, script, scope, functional, moduleIde
 /* style inject SSR */
 
 
-var HelloWorldComponent$1 = __vue_normalize__({
+var MainComponent = __vue_normalize__({
   render: __vue_render__,
   staticRenderFns: __vue_staticRenderFns__
 }, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__);
 
 var index = {
   install: function install(Vue, options) {
-    Vue.component('hello-world', HelloWorldComponent$1);
+    Vue.component('main-remote-component', MainComponent);
   }
 };
 
 export default index;
-export { HelloWorldComponent$1 as HelloWorldComponent };
+export { MainComponent };
 //# sourceMappingURL=index.module.js.map
