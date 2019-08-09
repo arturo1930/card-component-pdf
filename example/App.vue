@@ -1,14 +1,14 @@
 <template>
   <div id="app">
-    <hello-world></hello-world>
+    <main-remote-component></main-remote-component>
   </div>
 </template>
 
 <script lang="ts">
 import Vue, { VueConstructor } from "vue";
-import HelloWorldComponent from "../src/HelloWorldComponent.vue";
+import MainComponent from "../src/MainComponent.vue";
 
 export default Vue.extend({
-  components: { "hello-world": HelloWorldComponent }
+  components: { "main-remote-component": MainComponent }
 });
 </script>

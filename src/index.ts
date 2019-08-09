@@ -1,9 +1,9 @@
-import HelloWorldComponent from "./HelloWorldComponent.vue";
+import MainComponent from "./MainComponent.vue";
 
 export default {
   install(Vue: any, options: any) {
-    Vue.component('hello-world', HelloWorldComponent);
+    Vue.component('main-remote-component', MainComponent);
   }
 }
 
-export { HelloWorldComponent };
+export { MainComponent };
