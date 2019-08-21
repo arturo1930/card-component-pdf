@@ -1,6 +1,5 @@
 <template>
   <div>
-    <button @click="createPDF">PDF</button>
     <div>
       <button @click="downloadWithCSS">Download PDF WITH CSS</button>
       <br />
@@ -8,15 +7,12 @@
       <button @click="download">Download PDF WITHOUT CSS</button>
       <div ref="content" class="cardFont" style="width: 650px">
         <p align="right">
-          Ciudad de México, a <u>{{ model.dia }}</u> de
-          <u>{{ model.mes }}</u> de 2019
+          Ciudad de México
         </p>
         <p>
           Dra. María del Carmen de la Peza Casares
-          <br />
-          Secretaria Técnica del Fondo Institucional CONACyT (FOINS)
-          <br />
-          Presente
+          <br />Secretaria Técnica del Fondo Institucional CONACyT (FOINS)
+          <br />Presente
         </p>
         <p>
           De conformidad con las Bases y Términos de Referencia de la
@@ -72,13 +68,11 @@
           establecido en las Reglas de Operación del Fondo Institucional (FOINS)
           vigentes, el Convenio de Asignación de Recursos, y la Convocatoria y
           sus Términos de Referencia.
-          <br />
-          Atentamente
+          <br />Atentamente
         </p>
         <p>
           Grado y Nombre del Representante Legal
-          <br />
-          Firma (Será generada por el sistema)
+          <br />Firma (Será generada por el sistema)
         </p>
         <p style="background-color: red;">Hello Vue in CodeSandbox!</p>
         <p style="background-color: blue;">Hello Vue in CodeSandbox!</p>
@@ -91,36 +85,14 @@
     </div>
   </div>
 </template>
-<script lang="ts" src="./Pdf.component.ts"></script>
-<!--
+<!--<script lang="ts" src="./Pdf.component.ts"></script>-->
+
 <script>
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 
 export default {
   methods: {
-    createPDF() {
-      let pdfName = "test";
-      var doc = new jsPDF();
-      doc.text("Hello World", 10, 10);
-      doc.addHTML("<div>Add HTML</div>");
-      var imgData = "";
-      console.log(imgData);
-      // doc.setFontSize(40);
-      // doc.text(30, 20, 'Hello world!');
-      doc.addImage(imgData, "JPEG", 15, 40, 180, 160);
-      /*doc.fromHTML(
-          "<div><table><tr><td style='color:red'>COL</td><td>COL</td><td>COL</td><td>COL</td></tr></table></div>"
-        , 25  // x coord
-        , 25  // y coord
-        , {
-              'width': 550 // was 7.5, max width of content on PDF
-            
-        }
-    );*/
-doc.output('dataurlnewwindow'); 
-      doc.save(pdfName + ".pdf");
-    },
     downloadWithCSS() {
       const doc = new jsPDF();
       /** WITH CSS */
@@ -147,7 +119,6 @@ doc.output('dataurlnewwindow');
   }
 };
 </script>
--->
 <style>
 .colorText {
   color: red;
