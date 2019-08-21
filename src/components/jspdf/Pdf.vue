@@ -6,13 +6,17 @@
       <br />
       <br />
       <button @click="download">Download PDF WITHOUT CSS</button>
-      <div ref="content" style="width: 650px">
-        <p class="colorText">
-          Ciudad de México, a __ de ______________ de 2019
+      <div ref="content" class="cardFont" style="width: 650px">
+        <p align="right">
+          Ciudad de México, a <u>{{ model.dia }}</u> de
+          <u>{{ model.mes }}</u> de 2019
         </p>
         <p>
-          Dra. María del Carmen de la Peza Casares Secretaria Técnica del Fondo
-          Institucional CONACyT (FOINS) Presente
+          Dra. María del Carmen de la Peza Casares
+          <br />
+          Secretaria Técnica del Fondo Institucional CONACyT (FOINS)
+          <br />
+          Presente
         </p>
         <p>
           De conformidad con las Bases y Términos de Referencia de la
@@ -87,6 +91,8 @@
     </div>
   </div>
 </template>
+<script lang="ts" src="./Pdf.component.ts"></script>
+<!--
 <script>
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
@@ -112,7 +118,7 @@ export default {
             
         }
     );*/
-
+doc.output('dataurlnewwindow'); 
       doc.save(pdfName + ".pdf");
     },
     downloadWithCSS() {
@@ -141,9 +147,15 @@ export default {
   }
 };
 </script>
+-->
 <style>
 .colorText {
   color: red;
+  font-family: "Arial, Helvetica, sans-serif";
   background-color: aqua;
+}
+.cardFont {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 </style>
